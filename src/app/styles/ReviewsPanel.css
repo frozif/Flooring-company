@@ -1,0 +1,208 @@
+
+/* ------------------------- */
+/* ------------------------- */
+
+/* flooring_reviews */
+
+
+.flooring_reviews{
+background-image: url('../../shared/assets/img/achievementImg3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 120px;
+}
+
+.flooring_reviews_main{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+        box-sizing: border-box;
+    padding: 105px 0;
+}
+
+.flooring_reviews_info{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+max-width: 600px;
+text-align: center;
+}
+
+.flooring_reviews_info span{
+  font-weight: 700;
+}
+
+.flooring_reviews_info h2{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 48px;
+color: var(--white);
+margin: 0;
+}
+
+.flooring_reviews_info p{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: var(--white);
+margin-top: 20px;
+}
+
+.flooring_reviews_cards{
+display: flex;
+margin-top: 60px;
+gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flooring_reviews_card {
+border: 1px solid var(--white);
+border-radius: 10px;
+padding: 40px 0;
+width: 495px;
+background: rgba(255, 255, 255, 0.2);
+display: flex;
+flex-direction: column;
+align-items:center;
+  flex: 1;
+  opacity: 0;
+  animation: reviewIn 0.5s ease forwards;
+}
+
+
+.flooring_reviews_card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+@keyframes reviewIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.flooring_reviews_card h2{
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 20px;
+text-align: center;
+color: var(--white);
+}
+
+.flooring_reviews_card p {
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: var(--white);
+}
+
+.flooring_reviews_type {
+display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flooring_reviews_type input {
+      appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background: transparent;
+    cursor: pointer;
+}
+
+.flooring_reviews_type input:checked {
+    background: var(--white);
+}
+
+
+/* ------------------------- */
+/* Адаптация */
+
+
+@media (max-width: 1100px) {
+.flooring_reviews_cards{
+      flex-direction: column;
+}
+}
+
+@media (max-width: 850px) {
+
+.flooring_reviews_info h2{
+    font-size: 40px;
+}
+
+.flooring_reviews_info p {
+    font-size: 16px;
+}
+
+}
+
+@media (max-width: 700px) {
+
+.flooring_reviews_info h2{
+    font-size: 35px;
+}
+
+.flooring_reviews_info p {
+    font-size: 14px;
+}
+
+
+}
+
+
+
+@media (max-width: 575px) {
+
+  .flooring_reviews_info h2{
+    font-size: 30px;
+}
+
+.flooring_reviews_info p {
+    font-size: 14px;
+}
+
+.flooring_reviews_card{
+    max-width: 400px;
+}
+}
+
+
+@media (max-width: 450px) {
+
+  .flooring_reviews_info h2{
+    font-size: 25px;
+}
+
+
+
+.flooring_reviews_card{
+    max-width: 280px;
+}
+
+.flooring_reviews_info{
+  max-width: 200px;
+}
+}
+

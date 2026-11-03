@@ -1,0 +1,184 @@
+
+/* ------------------------- */
+/* ------------------------- */
+/* flooring_collections */
+
+
+.flooring_collections{
+background: #e5eff2;
+}
+
+
+
+.flooring_collections_slider{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.flooring_collections_slider button{
+background: transparent;
+border: 0;
+}
+
+.flooring_collections_cards{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 296px;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 10px 0;
+      scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;   
+      max-width: 936px;
+}
+
+.flooring_collections_cards::-webkit-scrollbar{
+  display: none;    
+}
+
+.flooring_collections_card{
+  scroll-snap-align: start;
+}
+
+.flooring_collections_card{
+border: 1px solid #e4e4e4;
+display: flex;
+flex-direction: column;
+width: 296px;
+height: 342px;
+background: var(--white);
+box-sizing: border-box;
+    padding: 10px 10px 20px;
+}
+
+.flooring_collections_card img{
+  display: block;
+  width: 276px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.flooring_collections_card h2{
+  margin: 20px 10px 12px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+
+.flooring_collections_card_priceInfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+    margin-top: auto;   
+}
+
+.flooring_collections_card_priceInfo p{
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #737373;
+}
+
+.flooring_collections_card_priceInfo button{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+  padding: 10px 15px 10px 20px;
+  border: 0;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+
+
+/* ------------------------- */
+/* Адаптация  */
+
+@media (max-width: 1100px) {
+  .flooring_collections_cards {
+  max-width: 616px;
+  }
+}
+
+@media (max-width: 990px) {
+  .flooring_collections_slider {
+    padding: 30px 16px;
+    gap: 12px;
+  }
+
+  .flooring_collections_cards {
+    gap: 16px;
+    grid-auto-columns: 296px;
+    max-width: 608px;
+  }
+}
+
+
+
+@media (max-width: 575px) {
+  .flooring_collections_slider {
+    padding: 24px 16px;
+    gap: 8px;
+  }
+
+  .flooring_collections_slider button {
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .flooring_collections_slider button svg,
+  .flooring_collections_slider button img {
+    width: 28px;
+    height: 28px;
+  }
+   .flooring_collections_cards {
+    grid-auto-columns: 100%;
+    gap: 12px;
+    max-width: 100%;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .flooring_collections_card {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px 16px;
+  }
+
+  .flooring_collections_card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 276 / 200;
+  }
+
+  .flooring_collections_card h2 {
+    margin: 16px 8px 10px;
+    font-size: 15px;
+  }
+
+  .flooring_collections_card_priceInfo {
+    padding: 0 8px;
+    margin-top: 16px;
+  }
+
+  .flooring_collections_card_priceInfo p {
+    font-size: 16px;
+  }
+
+  .flooring_collections_card_priceInfo button {
+    font-size: 14px;
+    padding: 9px 14px;
+  }
+}
+
+

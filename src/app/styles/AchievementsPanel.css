@@ -1,0 +1,154 @@
+
+
+/* ------------------------- */
+/* ------------------------- */
+/* flooring_achievements */
+
+
+.flooring_achievements_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.flooring_achievements_img{
+  --s: 1;
+    position: relative;
+  width: calc(700px * var(--s));
+  height: calc(660px * var(--s));
+  max-width: 100%;
+}
+
+.flooring_achievements_img img{
+  position: absolute;
+  display: block;
+  width: auto;
+  max-width: none;
+}
+
+.achievementImgOne{
+  z-index: 2;
+  height: calc(350px * var(--s));
+  top: calc(20px * var(--s));
+  left: 0;
+  transform: translateY(20%);
+}
+
+.achievementImgTwo{
+  z-index: 2;
+  height: calc(427px * var(--s));
+  top: 0;
+  left: calc(50px * var(--s));
+  transform: translateY(40%);
+}
+
+.achievementImgThree{
+  z-index: 3;
+  height: calc(534px * var(--s));
+  top: 0;
+  left: calc(300px * var(--s));
+  transform: translateY(20%);
+}
+
+.flooring_achievements_info{
+max-width: 505px;
+}
+
+.flooring_achievements_info h2{
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 48px;
+color: var(--primary);
+margin: 10px 0;
+}
+
+.flooring_achievements_info p{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+color: #50656c;
+}
+
+.flooring_achievements_info button{
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+color: var(--white);
+padding: 10px 15px 10px 20px;
+background: var(--primary);
+border: 0;
+margin-top: 20px;
+}
+
+/* ------------------------- */
+/* Адаптация */
+
+@media (max-width: 1100px) {
+  .flooring_achievements_img{
+    --s: 0.75;
+    flex-shrink: 0;
+  }
+
+
+  .flooring_achievements_info{
+    flex: 1;
+    min-width: 0;
+  }
+
+  .flooring_achievements_info h2{
+    font-size: 38px;
+  }
+
+  .flooring_achievements_info p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .flooring_achievements_img{ --s: 0.7; }
+
+   .flooring_achievements_main{
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .flooring_achievements_img{
+    --s: 0.8;
+    margin: 0 auto;
+  }
+
+  .flooring_achievements_info{
+    flex: none;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .flooring_achievements_info h2{
+    font-size: 36px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .flooring_achievements_img{
+    --s: 0.42;
+  }
+
+  .flooring_achievements_info h2{
+    font-size: 28px;
+    margin: 0 0 10px;
+  }
+
+  .flooring_achievements_info p{
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .flooring_achievements_info button{
+    font-size: 15px;
+    margin-top: 16px;
+  }
+}

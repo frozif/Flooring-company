@@ -1,0 +1,127 @@
+
+
+/* ------------------------- */
+/* ------------------------- */
+
+
+/* flooring_team */
+
+
+.flooring_team{
+margin-top: 70px;
+}
+
+.flooring_team_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.flooring_team_info h2{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 48px;
+color: var(--primary);
+}
+
+.flooring_team_info span{
+  font-weight: 700;
+}
+
+.flooring_team_experts{
+  margin-top: 60px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+
+.flooring_team_expert_card{
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  background: #fbfbfb;
+  box-sizing: border-box;
+}
+
+.flooring_team_expert_card img{
+width: 295px;
+  height: auto;
+    display: block;
+}
+
+.flooring_team_expert_card_info{
+margin: 30px 0;
+}
+
+.flooring_team_expert_card_info h2{
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 20px;
+text-align: center;
+color: var(--primary);
+}
+
+.flooring_team_expert_card_info p{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: #50656c;
+}
+
+/* ------------------------- */
+/* Адаптация */
+
+
+@media (max-width: 1250px) {
+
+
+.flooring_team_expert_card img{
+width: 250px;
+}
+
+}
+
+
+@media (max-width: 1100px) {
+
+
+.flooring_team_expert_card img{
+width: 230px;
+}
+
+}
+
+@media (max-width: 991px) {
+.flooring_team_experts{
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+
+@media (max-width: 575px) {
+.flooring_team_info h2{
+      font-size: 35px;
+}
+
+  .flooring_team_experts {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 400px) {
+.flooring_team_info h2{
+      font-size: 35px;
+      display: flex;
+          flex-direction: column;
+    align-items: center;
+}
+
+
+}

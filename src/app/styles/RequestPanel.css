@@ -1,0 +1,108 @@
+
+/* ------------------------- */
+/* ------------------------- */
+/* flooring_Request */
+.flooring_Request {
+  background: var(--primary);
+  padding: 60px 0;
+}
+
+.flooring_Request_info h2 {
+  margin: 0 0 40px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--white);
+}
+
+.flooring_Request_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 666px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid #356172;
+  border-radius: 6px;
+  background: #08232e;
+}
+
+.flooring_Request_panel_info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flooring_Request_panel_inputs {
+  display: flex;
+  gap: 16px;
+}
+
+.flooring_Request_panel input,
+.flooring_Request_panel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #356172;
+  border-radius: 4px;
+  background: #031820;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.flooring_Request_panel textarea {
+  min-height: 140px;
+    resize: none;
+}
+
+.flooring_Request_panel input::placeholder,
+.flooring_Request_panel textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.flooring_Request_panel input:focus,
+.flooring_Request_panel textarea:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.flooring_Request_panel button {
+  align-self: center;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 4px;
+  background: var(--white);
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.flooring_Request_panel button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .flooring_Request_info h2 {
+    font-size: 32px;
+  }
+
+  .flooring_Request_panel {
+    padding: 20px;
+  }
+
+  .flooring_Request_panel_inputs {
+    flex-direction: column;
+  }
+
+  .flooring_Request_panel button {
+    width: 100%;
+  }
+}
